@@ -1,7 +1,8 @@
 # Pg T
 
-Doing something while i learn about APIs and more about DOM manipulation.
+Learning about APIs and DOM manipulation.
 
-## Versions
+## Updates
 
-07/27 - v0.1 - Got the api and table writing from json working.
+- 07/27 - Got the api and first call/table writing from json working.
+- 07/28 - Reset the style, got the second half of the call/table writing working.
