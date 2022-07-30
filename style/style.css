@@ -150,7 +150,7 @@ tr:nth-child(even){
     left: 12px;
     top: calc(50% + 10px);
     transform: translateY(-50%);
-    color: var(--clr-gray300);
+    color: var(--clr-gray500);
     transition:
         top 0.3s ease,
         font-size 0.3s ease,
