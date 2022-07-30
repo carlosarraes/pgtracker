@@ -1,3 +1,238 @@
+:root{
+    --clr-primary: #81d4fa;
+    --clr-primary-light: #e1f5fe;
+    --clr-primary-dark: #4fc3f7;
+    --clr-gray100: #f9fbff;
+    --clr-gray150: #f4f6fb;
+    --clr-gray200: #eef1f6;
+    --clr-gray300: #e1e5ee;
+    --clr-gray400: #767b91;
+    --clr-gray500: #4f546c;
+    --clr-gray600: #2a324b;
+    --clr-gray700: #161d34;
+    --clr-warning: #fff0c2;
+    --clr-warning-font: #a68b00;
+    --clr-danger: #ffcdd2;
+    --clr-danger-font: #c62828;
+    --clr-success: #c8e6c9;
+    --clr-success-font: #388e3c;
+    --clr-link: #2962ff;
+    --clr-light: #ffb300;
+    --clr-med: #e53935;
+    --clr-dark: #d81b60;
+}
+
+body{
+    font-family: 'Ubuntu Mono', monospace;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+    color: var(--clr-gray500);
+    background-color: var(--clr-gray100);
+}
+
+.top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title{
+    font-size: 3rem;
+    color: var(--clr-gray500);
+    text-shadow: 1px 1px 1px #000, 
+                3px 3px 5px gray; 
+    margin-bottom: 20px;
+}
+
+.inputSection{
+    min-width: 700px;
+}
+
+.inputDiv{
+    margin-bottom: 30px;
+}
+
+table{
+    border-collapse: collapse;
+    box-shadow: 0 5px 10px var(--clr-gray300);
+    background-color: white;
+    text-align: left;
+    overflow: hidden;
+}
+
+thead{
+    box-shadow: 0 5px 10px var(--clr-gray300);
+    font-weight: 700;
+}
+
+th{
+    padding: 0.2rem 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+}
+
+td{
+    padding: 0.05rem 0.7rem;
+}
+
 abbr{
     text-decoration: underline;
+}
+
+tr:nth-child(even){
+    background-color: var(--clr-gray150);
+}
+
+.hide{
+    display: none !important;
+}
+
+.head{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    width:100%;
+}
+
+.danger{
+    background-color: var(--clr-danger);
+    color: var(--clr-danger-font);
+    text-align: center;
+}
+
+.warning{
+    background-color: var(--clr-warning);
+    color: var(--clr-warning-font);
+    text-align: center;
+}
+
+.success{
+    background-color: var(--clr-success);
+    color: var(--clr-success-font);
+    text-align: center;
+}
+
+.custom-field{
+    width: 100%;
+    position: relative;
+    font-size: 14px;
+    padding-top: 20px;
+    margin-bottom: 5px;
+}
+
+.custom-field input{
+    width: 89%;
+    border: none;
+    appearance: none;
+    padding: 6px;
+    border-radius: 0;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    outline: none;
+    font-size: 14px;
+    background:
+        linear-gradient(90deg, var(--clr-med),var(--clr-med)) center bottom/0 2px no-repeat,
+        linear-gradient(90deg, #ccc,#ccc) left bottom/100% 2px no-repeat,
+        linear-gradient(90deg, white,white) left bottom/100% no-repeat;
+    transition: background-size 0.3s ease;
+}
+
+.custom-field input:valid,
+.custom-field input:focus{
+    background-size: 100% 2px, 100% 2px, 100%;
+}
+
+.custom-field .placeholder{
+    position: absolute;
+    left: 12px;
+    top: calc(50% + 10px);
+    transform: translateY(-50%);
+    color: var(--clr-gray300);
+    transition:
+        top 0.3s ease,
+        font-size 0.3s ease,
+        color 0.3s ease;
+}
+
+.custom-field input:valid + .placeholder,
+.custom-field input:focus + .placeholder{
+    top: 10px;
+    font-size: 12px;
+    color: var(--clr-med);
+}
+
+button{
+    width: 10%;
+    padding: 5px;
+    background-color: var(--clr-gray600);
+    font-weight: 700;
+    border: none;
+    color: white;
+    box-shadow: 1px 1px 5px black;
+    transition: 0.3s ease;
+}
+
+button:hover{
+    background-color: #2962ff;
+}
+
+button:active{
+    background-color: #388e3c;
+}
+
+h4{
+    font-size: 12px;
+    margin: 20px 0;
+}
+
+.loading{
+    display: none;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+}
+
+.loadingDot{
+    height:20px;
+    width:20px;
+    border-radius:50%;
+    display: inline-block;
+    margin: .5rem;
+    animation: scaling 2.5s ease-in-out infinite;
+}
+
+.loadingDot:nth-child(1){
+    animation-delay:0.2s;
+}
+.loadingDot:nth-child(2){
+    animation-delay:0.4s;
+}
+.loadingDot:nth-child(3){
+    animation-delay:0.6s;
+}
+.loadingDot:nth-child(4){
+    animation-delay:0.8s;
+}
+.loadingDot:nth-child(5){
+    animation-delay:1s;
+}
+
+
+@keyframes scaling{
+    0%, 100%{
+        transform: scale(0.2);
+        background-color: #767b91;
+    }
+    40%{
+        transform: scale(1);
+        background-color: #2a324b;
+    }
+    50%{
+        transform: scale(1);
+        background-color: #161d34;
+    }
 }

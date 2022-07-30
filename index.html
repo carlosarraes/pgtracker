@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="app.js" defer></script>
+    <link rel="stylesheet" href="style/resetstyle.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&display=swap" rel="stylesheet"> 
+    <title>Pegaxy Tracker</title>
+</head>
+<body>
+    <main class="container">
+        <section class="top">
+            <h1 id="title">Pegaxy Tracker</h1>
+        </section>    
+        <section class="inputSection">
+            <div class="inputDiv">
+                <label class="custom-field">
+                    <input type="text" name="walletInput" id="walletInput" required>
+                    <span class="placeholder">Wallet Address</span>
+                </label>                
+                <button id="searchButton">Search</button>
+            </div>
+        </section>
+        <section class="loading">
+            <div class="loadingDot"></div>
+            <div class="loadingDot"></div>
+            <div class="loadingDot"></div>
+            <div class="loadingDot"></div>
+            <div class="loadingDot"></div>
+        </section>
+        <section class="mid hide">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th class="th-title">ID</th>
+                    <th class="th-title">Name</th>
+                    <th class="th-title">Energy</th>
+                    <th class="th-title">Type</th>
+                    <th class="th-title">Gender</th>
+                    <th class="th-title"><abbr title="Breed count">#Breed</abbr></th>
+                    <th class="th-title"><abbr title="Win Rate">Win</abbr></th>
+                    <th class="th-title">Earning</th>
+                    <th class="th-title"><abbr title="Amount of days that was requested">Days</abbr></th>
+                    <th class="th-title">Earn/Day</th>
+                    <th class="th-title"><abbr title="Last day registered by Pegaxy API">Last Date</abbr></th>
+                </tr>
+                </thead>
+                <tbody id="dataD">
+                    
+                </tbody>
+            </table>
+        </section>
+        <section class="footer">
+            <h4 class="donate">Tip: 0x344Cf0E240F3BdA475F1fb72dcbfeE165DFB31ED</h4>
+        </section>
+    </main>
+</body>
+</html>
