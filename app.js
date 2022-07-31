@@ -42,9 +42,11 @@ const fillObject = async (pegaData) =>{
         let lastItem = pegaEarnData.data.pop();
         if (lastItem == null){
             pegaObj.lastDate = `null`;
+            pegaObj.yesterday = `null`;
         }else{
             let epochDate = new Date(lastItem.epoch*1000);
             pegaObj.lastDate = `${epochDate.getMonth()+1}/${epochDate.getDay()}`;
+            pegaObj.yesterday = Math.floor(lastItem.ownerPegaRewards);
         }
         pegaInfo.push(pegaObj);
     }
