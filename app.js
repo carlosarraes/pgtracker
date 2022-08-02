@@ -45,7 +45,7 @@ const fillObject = async (pegaData) =>{
             pegaObj.yesterday = `null`;
         }else{
             let epochDate = new Date(lastItem.epoch*1000);
-            pegaObj.lastDate = `${epochDate.getMonth()+1}/${epochDate.getDay()}`;
+            pegaObj.lastDate = `${epochDate.getMonth()+1}/${epochDate.getDate()}`;
             pegaObj.yesterday = Math.floor(lastItem.ownerPegaRewards);
         }
         pegaInfo.push(pegaObj);
@@ -100,7 +100,11 @@ sBtn.addEventListener('click', ()=>{
 
 // Function test
 // const pegaTest = async () => {
-//     const pegaEarnData = await axios.get(`https://api-apollo.pegaxy.io/v1/pegas/5379/earnings?since=${myDate/1000}`)
+//     const pegaEarnData = await axios.get(`https://api-apollo.pegaxy.io/v1/pegas/5379/earnings`)
 //     let lastItem = pegaEarnData.data.pop();
-//     console.log(lastItem.epoch)
+//     let epochDate = new Date(lastItem.epoch*1000);
+//     let lastDate = `${epochDate.getMonth()+1}/${epochDate.getDate()}`;
+//     console.log(lastItem.epoch);
+//     console.log(epochDate);
+//     console.log(lastDate);
 // }
